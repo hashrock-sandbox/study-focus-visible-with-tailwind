@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+    <style>
+      button.native {
+        background-color: blueviolet;
+        color: white;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+      }
+      button.native:focus{
+        outline: none;
+      }
+
+      button.native:focus-visible {
+        outline: 2px dotted dimgray;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="focus:ring-2 focus:ring-red-500 ml-2 p-2 rounded text-white bg-blue-500">
+      Ring on focus
+    </button>
+    <button class="focus-visible:ring-2 focus-visible:ring-red-500 ml-2 p-2 rounded text-white bg-blue-500 focus:outline-none">
+      Ring on focus-visible
+    </button>
+
+    <button class="native">
+      Focus Me
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js"></script>
+  </body>
+</html>
